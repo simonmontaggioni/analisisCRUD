@@ -1,0 +1,69 @@
+<div  class= "col-xs-9 col-sm-9 col-md-9 col-lg-9">
+ 				<div class= "panel panel-primary">
+ 					<div class= "panel-heading">
+ 						<h3 class= "panel-title"> Listado de Personas</h3>
+ 					</div>
+ 					
+ 					<div class="panel-body">
+
+ 						<form action="<?php  echo BASE_URL;?>persons/listing" method="post">
+	 						<table class="table table-bordered">
+	 							<thead>
+	 							 	<tr class="success"> <!--filas -->
+	 							 		<th>#</th>		<!--Columnas -->
+									    <th >Cedula</th>		
+									    <th >Nombre</th>		
+									    <th >Apellido</th>	
+									    <th >Sexo</th>	
+									    <th >Fecha de Nacimiento</th>	
+									    <th >Telefono</th>	
+									    <th >Correo</th>
+									    <th colspan="2">Acciones</th>
+								  	</tr>
+	 							</thead>
+								<tbody>
+								<?php foreach ($this->_listado as $persona): ?>
+									<tr> 
+								 		<td ><?php echo $persona['id'];?></td>
+									    <td ><?php echo $persona['cedula']; ?></td>		
+									    <td ><?php echo $persona['nombre']; ?></td>		
+									    <td ><?php echo $persona['apellido']; ?></td>	
+									    <td ><?php echo $persona['sexo']; ?></td>	
+									    <td ><?php echo $persona['fecha_nacimiento']; ?></td>	
+									    <td ><?php echo $persona['telefono']; ?></td>	
+									    <td ><?php echo $persona['correo']; ?></td>
+									    <th>
+									    	<a href="<?php echo BASE_URL."persons/update/". $persona['id'] ; ?>">
+									    		<span class="glyphicon glyphicon-search"></span>
+									    	</a>
+									    </th>
+										<th>
+											<a href="<?php echo BASE_URL."persons/delete/". $persona['id'] ?>">
+											<span class="glyphicon glyphicon-remove"></span>
+											</a>
+										</th>
+								 	</tr>
+								<?php endforeach ?>
+								 </tbody>
+							</table>
+						</form>
+
+ 					</div>
+ 				</div>
+ 		</div>
+ 			<!-- no borrar -->
+ 			</div>
+ 			
+ 		</div>
+ </div>
+
+ 	
+ 	
+ 				
+ 					
+ 					
+ 				
+
+
+
+

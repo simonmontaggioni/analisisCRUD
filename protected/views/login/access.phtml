@@ -1,0 +1,40 @@
+<br><br><br>
+
+<div class= "container panel panel-danger" style="max-width: 500px;">
+
+<form id="login-form" class="form-signin" action='<?php echo BASE_URL . 'login/signIn'?>' method="post">
+	
+		 <br>
+		 <?php if (isset($this->_error)) echo $this->_error; ?>
+       <strong align="center">Por favor, inicie sesion para tener acceso.</strong> 
+        <br><br>
+        <div class="form-group">
+        <label for="login-username">Usuario</label>
+        <input type="text" class="form-control" placeholder="Nombre de Usuario" name="user_name" class="form-control" />
+      </div>
+<br>
+      <div class="form-group">
+        <label for="login-password">Contrase&ntilde;a</label>        
+        <input type="password" class="form-control" placeholder="Contrase&ntilde;a" name="password" class="form-control" />
+      </div>
+
+      <br>
+      
+      <div class="form-group">
+<input type="submit" class="btn btn-danger btn-block"  value="Ingresar" />
+      </div>
+        
+  </form>
+  
+  
+ </div>	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

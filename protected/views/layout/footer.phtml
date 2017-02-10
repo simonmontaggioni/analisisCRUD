@@ -1,0 +1,30 @@
+	</div> <!-- #wrapper -->
+	
+	<footer id="footer">
+		<ul class="nav pull-right">
+			<li>
+				
+			</li>
+		</ul>
+	</footer>
+	<script type="text/javascript" src="<?php echo PUBLIC_URL; ?>js/jquery-2.1.4.js"></script>
+	<script type="text/javascript" src="<?php echo PUBLIC_URL; ?>js/bootstrapValidator.min.js"></script>
+	<script type="text/javascript" src="<?php echo PUBLIC_URL; ?>js/bootstrap.js"></script>
+	<!-- / START - page related files and scripts [optional] -->
+    <?php  if (isset($_view_params['js']) && count($_view_params['js'])): ?>
+	<?php  	for ($i = 0; $i < count($_view_params['js']); $i++):  ?>
+		<script src="<?php echo $_view_params['js'][$i]; ?>"></script>
+	<?php  	endfor; ?>
+	<?php  endif;?>
+    <!-- / END - page related files and scripts [optional] -->
+ 	
+
+	
+	<script type="text/javascript" src="<?php echo PUBLIC_URL; ?>js/index.js"></script>
+	
+	
+
+</body>
+</html>
+
+<!-- end footer.phtml -->

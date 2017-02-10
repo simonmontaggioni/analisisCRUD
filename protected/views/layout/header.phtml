@@ -1,0 +1,105 @@
+<!-- header.phtml -->
+
+		<div id="wrap">
+		
+			<div class= "container ">
+			
+				<nav class="navbar navbar-default" role="navigation">
+				
+					<div class="navbar-header">
+						
+						<button type="button" class="navbar-tooggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+
+						
+						
+						<a class= "navbar-brand" href="#"><?php  echo APP_NAME; ?></a>
+					</div>
+					
+					
+					
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+<!--  					
+						<ul class="nav navbar-nav">
+						
+							<li class="active"><a href="#">Link One</a></li>
+							<li><a href="#"> Link Two</a></li>
+							
+							<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown"> Dropdown<b class="caret"></b></a>
+							
+							<ul class="dropdown-menu">
+							   <li><a href="#">Action</a></li>
+							   <li><a href="#">Another action</a></li>
+							   <li><a href="#">Something else here</a></li>
+							   <li class="divider"></li>
+							   <li><a href="#">Separated link</a></li>
+							   <li class="divider"></li>
+							   <li><a href="#">One more separated link</a></li>
+							  </ul>
+							  
+					 </li>
+				</ul>
+-->
+			<ul class="nav navbar-nav">
+					
+					<?php  if (isset($_view_params['menu'])):?>
+					<?php  for ($i= 0; $i < count($_view_params['menu']); $i++):?>		
+					<?php 		if( $this-> _controller ==$_view_params['menu'][$i]['id']):	?>		
+								<li class="active"><a href="<?php  echo $_view_params['menu'][$i]['link'];?>"><?php  echo $_view_params['menu'][$i]['title']; ?></a></li>
+					<?php  else: ?>
+								<li><a href="<?php echo $_view_params['menu'][$i]['link'] ;?>"><?php  echo $_view_params['menu'][$i]['title']; ?></a></li>
+					<?php  endif; ?>
+					<?php  endfor;?>
+					<?php  endif;?>
+					
+					</ul>
+						<ul class="nav navbar-nav pull-right">
+									<li class="dropdown">
+										<a class="dropdown-toggle" data-toggle="dropdown" href="javascript:;">
+											<i class="fa fa-user"></i>
+								        	<?php echo  utf8_decode(Session::get('level') );?>
+								        	<span class="caret"></span>
+								    	</a>
+								    	
+								    	<ul class="dropdown-menu" role="menu">
+									        <li>
+									        	<a href="page-profile.html">
+									        		<i class="fa fa-user"></i> 
+									        		&nbsp;&nbsp;My Profile
+									        	</a>
+									        </li>
+									        <li>
+									        	<a href="page-calendar.html">
+									        		<i class="fa fa-calendar"></i> 
+									        		&nbsp;&nbsp;My Calendar
+									        	</a>
+									        </li>
+									        <li>
+									        	<a href="page-settings.html">
+									        		<i class="fa fa-cogs"></i> 
+									        		&nbsp;&nbsp;Settings
+									        	</a>
+									        </li>
+									        <li class="divider"></li>
+									        <li>
+									        	<a href="<?php echo $_view_params['login']['href'];?>">
+									        		<i class="fa <?php echo $_view_params['login']['icon'];?>"></i> 
+									        		<?php echo $_view_params['login']['name']; ?>
+									        	</a>
+									        </li>
+								    	</ul>
+								    </li>
+						</ul>
+						
+					</div>
+					
+			</nav>
+			
+								
+<!-- end header.phtml -->	
+							

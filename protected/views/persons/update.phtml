@@ -1,0 +1,56 @@
+<div  class= "col-xs-9 col-sm-9 col-md-9 col-lg-9">
+ 				<div class= "panel panel-primary">
+ 					<div class= "panel-heading">
+ 						<h3 class= "panel-title"> Nueva Persona	</h3>
+ 					</div>
+ 					
+ 					<div class="panel-body">
+
+					<form action="<?php  echo BASE_URL;?>persons/update" method="post">
+						<center>
+							<input type="hidden" name="id" value="<?php echo $this->_persona[0]['id'] ?>">
+							<label >Cedula</label>
+							<input type="text" name="cedula" value="<?php echo $this->_persona[0]['cedula'] ?>">
+							<br><br>
+							<label >Nombre</label>
+							<input type="text" name="nombre" value="<?php echo $this->_persona[0]['nombre'] ?>">
+							<br><br>
+							<label >Apellido</label>
+							<input type="text" name="apellido" value="<?php echo $this->_persona[0]['apellido'] ?>">
+							<br><br>
+							<label >Sexo</label>
+							<input type="text" name="sexo" value="<?php echo $this->_persona[0]['sexo'] ?>">
+							<br><br>
+							<label >Fecha de Nacimiento</label>
+							<input type="date" name="fecha_nacimiento" value="<?php echo $this->_persona[0]['fecha_nacimiento'] ?>">
+							<br><br>
+							<label >Telefono</label>
+							<input type="text" name="telefono" value="<?php echo $this->_persona[0]['telefono'] ?>">
+							<br><br>
+							<label >Correo Electronico</label>
+							<input type="text" name="correo" value="<?php echo $this->_persona[0]['correo'] ?>">
+							<br><br>
+							<input type="submit">
+						</center>
+					</form>
+
+ 					</div>
+ 				</div>
+ 		</div>
+ 			<!-- no borrar -->
+ 			</div>
+ 			
+ 		</div>
+ </div>
+
+ 	
+ 	
+ 				
+ 					
+ 					
+ 				
+
+
+
+
+ 	
